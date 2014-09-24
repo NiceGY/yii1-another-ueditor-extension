@@ -5,7 +5,7 @@
  * 因为没有用到视图，可以随意继承自己写的基类，
  * 如果基类里已经做了权限检查，可以把init方法里的注释掉了
  */
-class UeditorController extends BaseController{
+class UeditorController extends CExtController{
 
     private $_config;
 
@@ -21,12 +21,12 @@ class UeditorController extends BaseController{
             $_COOKIE[$sessionName] = $_GET[$sessionName];
         }
         //TODO:更详细的权限检查需要自己做
-        /*
+
         if(Yii::app()->user->isGuest){
             echo json_encode(array('state'=>'没有权限'));
             Yii::app()->end();
         }
-        */
+
 
         Yii::import('ext.baiduUeditor.*');
 
