@@ -57,7 +57,7 @@ baiduUeditor
 	            //不要配置serverUrl(即使配置也会被覆盖)程序会自动处理后端url
 	            'config'=>array(
 	                'toolbars'=>array(array('fullscreen', 'source', '|')),//toolbars注意是嵌套两个数组
-	                'lang'=>'zh_cn'
+	                'lang'=>'zh-cn'
 	            )
 	        )
 	    );
