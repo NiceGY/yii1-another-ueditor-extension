@@ -30,7 +30,7 @@ baiduUeditor
 
 	```
 
-	如果你想只在某个module里使用，请添加以下代码到*modules/moduleName/moduleNameModule.php*
+	如果你想只在某个module里使用，请添加以下代码到*modules/moduleName/moduleNameModule.php*的*init*方法中
 
 	```
 	$this->controllerMap=array(
@@ -45,23 +45,23 @@ baiduUeditor
 
 3. 在要显示编辑器的view中放置如下代码
 ```
-<?php
-    $this->widget('ext.baiduUeditor.UeditorWidget',
-        array(
-            'id'=>'article_content',//容器的id 唯一的[必须配置]
-            'name'=>'content',//post到后台接收的name [必须配置]
-            'content'=>'',//初始化内容 [可选的]
-            
-            //配置选项，[可选的]
-            //将ueditor的配置项以数组键值对的方式传入,具体查看ueditor.config.js
-            //不要配置serverUrl(即使配置也会被覆盖)程序会自动处理后端url
-            'config'=>array(
-                'toolbars'=>array(array('fullscreen', 'source', '|')),//toolbars注意是嵌套两个数组
-                'lang'=>'en'
-            )
-        )
-    );
-?>
+	<?php
+	    $this->widget('ext.baiduUeditor.UeditorWidget',
+	        array(
+	            'id'=>'article_content',//容器的id 唯一的[必须配置]
+	            'name'=>'content',//post到后台接收的name [必须配置]
+	            'content'=>'',//初始化内容 [可选的]
+	            
+	            //配置选项，[可选的]
+	            //将ueditor的配置项以数组键值对的方式传入,具体查看ueditor.config.js
+	            //不要配置serverUrl(即使配置也会被覆盖)程序会自动处理后端url
+	            'config'=>array(
+	                'toolbars'=>array(array('fullscreen', 'source', '|')),//toolbars注意是嵌套两个数组
+	                'lang'=>'zh_cn'
+	            )
+	        )
+	    );
+	?>
 ```
 
 提问题
