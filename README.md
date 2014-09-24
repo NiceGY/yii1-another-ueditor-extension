@@ -10,7 +10,7 @@ yii1-another-ueditor-extension
 baiduUeditor       
 |--resource //ueditor资源包     
 |--views  //widget的视图    
-|--config.php //后端配置文件 包括文件格式 大小 目录 路径 文件名等等
+|--config.php //后端配置文件 包括文件格式 大小 目录 路径 文件名等等      
 |--UeditorController.php  //后端主控制器  可以修改继承类为自定义的基类   
 |--UeditorWidget.php    //widget主要渲染编辑器  
 |--Uploader.class.php   //上传等主要处理类  
